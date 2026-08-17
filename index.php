@@ -20,10 +20,10 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
     <header>
         <h1>CRUD - Restaurante</h1>
     </header>
+
     <main>
         <h2>Adicione um novo usuario!</h2>
         <form action="public/cadastrar.php" method="POST">
-           
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
             <br>
@@ -32,16 +32,14 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
             <br>
             <button type="submit">Cadastrar</button>
         </form>
-                <?php?>
             </table>
         </div>
 
+        <div>
+            <?php
+
+            ?>
+        </div>
     </main>
-    <footer>
-
-    </footer>
-
-
 </body>
-
 </html>
