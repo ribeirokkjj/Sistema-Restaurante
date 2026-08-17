@@ -1,7 +1,8 @@
 <?php
 
 include "infra/conexao.php";
-$livros = mysqli_query($conexao, "SELECT * FROM livros");
+$usuario = mysqli_query($conexao, "SELECT * FROM usuario");
+$pratos = mysqli_query($conexao, "SELECT * FROM pratos");
 
 ?>
 
