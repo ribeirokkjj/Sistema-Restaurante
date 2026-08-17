@@ -24,8 +24,8 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
         <h2>Adicione um novo usuario!</h2>
         <form action="public/cadastrar.php" method="POST">
            
-            <label for="Name">Nome:</label>
-            <input type="text" name="User">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome">
             <br>
             <label for="email">Email:</label>
             <input type="email" name="email">
