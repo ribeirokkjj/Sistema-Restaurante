@@ -1,9 +1,17 @@
-CREATE DATABASE livraria_icaro_m2;
-USE livraria_icaro_m2;
+CREATE DATABASE restaurante_db;
+USE restaurante_db;
 
-CREATE TABLE livros (
+CREATE TABLE pratos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(200) NOT NULL,
-    autor VARCHAR(100)NOT NULL,
-    ano INT NOT NULL
+    nome VARCHAR(200) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2) NOT NULL,
+    categoria INT NOT NULL
+);
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(200) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(200) NOT NULL
 );
