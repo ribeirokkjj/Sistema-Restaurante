@@ -17,44 +17,21 @@ $livros = mysqli_query($conexao, "SELECT * FROM livros");
 
 <body>
     <header>
-        <h1>CRUD - Livraria</h1>
+        <h1>CRUD - Restaurante</h1>
     </header>
     <main>
-        <h2>Adicione um novo livro!</h2>
+        <h2>Adicione um novo usuario!</h2>
         <form action="public/cadastrar.php" method="POST">
-            <label for="titulo">Título:</label>
-            <input type="text" name="titulo">
+           
+            <label for="Name">Nome:</label>
+            <input type="text" name="User">
             <br>
-            <label for="autor">Autor:</label>
-            <input type="text" name="autor">
-            <br>
-            <label for="ano">Ano de Publicação:</label>
-            <input type="number" name="ano">
+            <label for="email">Email:</label>
+            <input type="email" name="email">
             <br>
             <button type="submit">Cadastrar</button>
         </form>
-        <div>
-            <h2>Livros Cadastrados</h2>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Título</th>
-                    <th>Autor</th>
-                    <th>Ano</th>
-                    <th>Ações</th>
-                </tr>
-                <?php while ($livro = mysqli_fetch_assoc($livros)) { ?>
-                    <tr>
-                        <td><?php echo $livro["id"] ?></td>
-                        <td><?php echo $livro["titulo"] ?></td>
-                        <td><?php echo $livro["autor"] ?></td>
-                        <td><?php echo $livro["ano"] ?></td>
-                        <td>
-                            <a href="public/editar.php?id=<?php echo $livro["id"] ?>">Editar</a>
-                            <a href="public/excluir.php?id=<?php echo $livro["id"] ?>">Excluir</a>
-                        </td>
-                    </tr>
-                <?php } ?>
+                <?php?>
             </table>
         </div>
 
