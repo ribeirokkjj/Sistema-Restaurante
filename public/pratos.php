@@ -50,13 +50,14 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                     <th>Categoria</th>
                     <th>Ações</th>
                 </tr>
-                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
+                
+                <?php while ($prato = mysqli_fetch_assoc($pratos)) { ?>
                     <tr>
-                        <td><?php echo $pratos["id"] ?></td>
-                        <td><?php echo $pratos["nome"] ?></td>
-                        <td><?php echo $pratos["descrição"] ?></td>
-                        <td><?php echo $pratos["preço"] ?></td>
-                        <td><?php echo $pratos["categoria"] ?></td>
+                        <td><?php echo $prato["id"] ?></td>
+                        <td><?php echo $prato["nome"] ?></td>
+                        <td><?php echo $prato["descricao"] ?></td>
+                        <td><?php echo $prato["preco"] ?></td>
+                        <td><?php echo $prato["categoria"] ?></td>
                         </td>
                     </tr>
 
