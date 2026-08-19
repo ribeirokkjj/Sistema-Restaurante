@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['usuario_nome'] = $usuario['nome'];
             $_SESSION['logado'] = true;
 
-            header('Location: public/cadastrar_prato.php');
+            header('Location: public/pratos.php');
             exit;
         } else {
             $erro = "Nome ou E-mail incorretos!";
