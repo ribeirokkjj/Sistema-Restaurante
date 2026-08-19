@@ -29,6 +29,8 @@ include "infra/conexao.php";
             <input type="email" name="email">
             <br>
             <button type="submit">Cadastrar</button>
+            <button type="button" onclick="window.location.href='public/pratos.php'">Ir para pratos</button>
+            
         </form>
         </div> -->
 
