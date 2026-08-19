@@ -1,8 +1,6 @@
 <?php
 
 include "infra/conexao.php";
-$usuario = mysqli_query($conexao, "SELECT * FROM usuario");
-$pratos = mysqli_query($conexao, "SELECT * FROM pratos");
 
 ?>
 
@@ -31,8 +29,10 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
             <input type="email" name="email">
             <br>
             <button type="submit">Cadastrar</button>
+            <button type="button" onclick="window.location.href='public/pratos.php'">Ir para pratos</button>
+            
         </form>
-            </table>
+        
         </div>
 
         <div>

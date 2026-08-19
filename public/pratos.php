@@ -23,18 +23,18 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
 
     <main>
         <h2>Adicione um novo prato!</h2>
-        <form action="cadastrar.php" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome">
+        <form action="cadastrar_prato.php" method="POST">
+            <label for="nome_prato">Nome do prato:</label>
+            <input type="text" name="nome_prato">
             <br>
-            <label for="description">Descrição:</label>
-            <input type="text" name="text">
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao">
             <br>
-             <label for="price">preço:</label>
-            <input type="text" name="text">
+             <label for="preco">preço:</label>
+            <input type="text" name="preco">
             <br>
-             <label for="category">categoria:</label>
-            <input type="text" name="text">
+             <label for="categoria">categoria:</label>
+            <input type="text" name="categoria">
             <br>
             <button type="submit">adicionar</button>
         </form>
@@ -53,13 +53,14 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                 <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
                     <tr>
                         <td><?php echo $pratos["id"] ?></td>
-                        <td><?php echo $pratos["noem"] ?></td>
+                        <td><?php echo $pratos["nome"] ?></td>
                         <td><?php echo $pratos["descrição"] ?></td>
                         <td><?php echo $pratos["preço"] ?></td>
                         <td><?php echo $pratos["categoria"] ?></td>
-                        <td>
-            
                         </td>
                     </tr>
 
-      <?php
+      <?php } ?>
+    </main>
+</body>
+</html>
